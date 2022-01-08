@@ -11,4 +11,10 @@ router.get('/', (req, res) => {
         }
     });
 });
+router.post("/createEmployee", async (req, res) => {
+    const emp = req.body;
+    const newEmp = new EmployeeModel(emp);
+    await newEmp.save();
+    res.json({msg: 'Save Success', emp}) 
+});
 module.exports = router;
