@@ -6,6 +6,7 @@ const members = require('./Members');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const UserModel = require("./models/Users")
+var cors = require('cors');
 // todoController(app);
 // app.set('view engine', 'ejs');
 
